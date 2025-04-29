@@ -1,5 +1,5 @@
 vehicle_log.csv
 vehicle_counts_log.csv
 traffic_data.csv
-
+__pycache__/
 dataset/
