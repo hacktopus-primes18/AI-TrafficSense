@@ -22,7 +22,7 @@ Traditional traffic lights follow fixed timers, often causing unnecessary waitin
 ---
 
 ## 🛠️ Tech Stack
-- **Python 3.10+**
+- **Python 3.10+ (For best functionality, 3.10.x is recommended)**
 - **OpenCV** (image/video processing)  
 - **YOLO (You Only Look Once)** for object detection  
 - **HTML/CSS + JavaScript** for GUI  
@@ -34,7 +34,7 @@ Traditional traffic lights follow fixed timers, often causing unnecessary waitin
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/AI-TrafficSense.git
+git clone https://github.com/Naitikg15/AI-TrafficSense.git
 cd AI-TrafficSense
 
 # Create virtual environment (recommended)
@@ -43,14 +43,14 @@ python -m venv env
 source env/bin/activate     # On Windows: env\Scripts\activate
 
 #Use your own dataset
-In server.py, add the path to your video files for all the 4 lanes, or download the pre- recorded dataset folder from  https://drive.google.com/drive/folders/134TdWc4mrhfiK5dJ13Q8RjLlWcXD733q?usp=drive_link
+Add your 4 video files into the given directory: 'static/dataset/' , or download the pre- recorded dataset folder from  ' https://drive.google.com/drive/folders/134TdWc4mrhfiK5dJ13Q8RjLlWcXD733q?usp=drive_link ' and paste it in the directory mentioned above.
 
 # Install dependencies
 pip install -r requirements.txt
 
 
 # Run the application
-python main.py
+python server.py
 ```
 
 ## 📌 Future Enhancements
@@ -62,7 +62,7 @@ python main.py
 
 ## 🤝 Contributors
 
--   👨‍💻 *Naitik Gupta* (Backend Development and Integration)
+-   👨‍💻 *Naitik Gupta* (Server Development and Integration)
 -   👩‍💻 *Nilansh Mishra* (Dataset Collection and Refining)
 -   👨‍💻 *Nistha Nigam* (GUI and Dashboard Designing)
 -   👨‍💻 *Ayushree* (Research and Testing)
