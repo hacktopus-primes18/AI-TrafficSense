@@ -43,7 +43,11 @@ python -m venv env
 source env/bin/activate     # On Windows: env\Scripts\activate
 
 #Use your own dataset
+<<<<<<< HEAD
 Add your 4 video files into the given directory: 'static/dataset/' , or download the pre- recorded dataset folder from  ' https://drive.google.com/drive/folders/134TdWc4mrhfiK5dJ13Q8RjLlWcXD733q?usp=drive_link ' and paste it in the directory mentioned above.
+=======
+In server.py, add the path to your video files for all the 4 lanes, or download the pre- recorded dataset folder from  ' https://drive.google.com/drive/folders/134TdWc4mrhfiK5dJ13Q8RjLlWcXD733q?usp=drive_link '
+>>>>>>> be57501c7811bb78e09b7d02a37dabb34bf90abb
 
 # Install dependencies
 pip install -r requirements.txt
