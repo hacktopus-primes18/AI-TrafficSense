@@ -1,3 +1,6 @@
+# server.py
+
+
 import cv2
 import pandas as pd
 import time
@@ -16,20 +19,20 @@ model = YOLO('yolov8n.pt')
 
 # Video sources
 video_sources = {
-    "1":r"C:\Users\Hp\OneDrive\Desktop\AI-Traffic3\frame1.mp4", 
-    "2":r"C:\Users\Hp\OneDrive\Desktop\AI-Traffic3\frame2.mp4", 
-    "3":r"C:\Users\Hp\OneDrive\Desktop\AI-Traffic3\frame3.mp4", 
-    "4":r"C:\Users\Hp\OneDrive\Desktop\AI-Traffic3\frame4.mp4"  
+    "1":r"C:\Users\nilan\Desktop\AI-TrafficSense\frame1.mp4", #Add your path to first video
+    "2":r"C:\Users\nilan\Desktop\AI-TrafficSense\frame2.mp4", #Add your path to second video
+    "3":r"C:\Users\nilan\Desktop\AI-TrafficSense\frame3.mp4", #Add your path to third video
+    "4":r"C:\Users\nilan\Desktop\AI-TrafficSense\frame4.mp4"  #Add your path to fourth video
 }
 caps = {vid: cv2.VideoCapture(path) for vid, path in video_sources.items()}
 
 
-cap =cv2.VideoCapture(video_sources["1"])
-print(cap.isOpened())
-if not cap.isOpened():
-    print("Error: Could not open video.")   
-else:
-    print("Video opened successfully.") 
+# cap =cv2.VideoCapture(video_sources["1"])
+# print(cap.isOpened())
+# if not cap.isOpened():
+#     print("Error: Could not open video.")   
+# else:
+#     print("Video opened successfully.") 
 # Store counts and logs
 vehicle_counts = {vid: 0 for vid in video_sources}
 vehicle_logs = {vid: [] for vid in video_sources}
@@ -54,7 +57,13 @@ def process_video():
                 cap.set(cv2.CAP_PROP_POS_FRAMES, 0)
                 continue
 
-            results = model.predict(source=frame, conf=0.3, verbose=False)
+           frame_count[vid] += 1
+    if frame_count[vid] % 5 != 0:
+     continue
+
+results = model(frame, conf=0.3, verbose=False)
+
+
 
             count = 0
             for r in results:

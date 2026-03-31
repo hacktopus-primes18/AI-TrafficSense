@@ -1,10 +1,22 @@
+your_image.jpg
+traffic 3.avif
+traffic1.jpeg
+traffic2.webp
 __pycache__/
+dataset/
 static/dataset/
+traffic_data.csv
 .vscode/
 test.txt
 vehicle_log_1.csv
 vehicle_log_2.csv
 vehicle_log_3.csv
 vehicle_log_4.csv
+env/# Videos 
+frame1.mp4
+frame2.mp4
+frame3.mp4
+frame4.mp4
+Lane2.mp4
+AI-based-Traffic-Management-System/
 env/
-env310/
